@@ -1,0 +1,176 @@
+/* Pakistan School Green Theme */
+
+:root {
+  --primary-green: #1e7e34;
+  --secondary-green: #2da44e;
+  --light-green: #e8f5e9;
+  --dark-green: #0d3d1f;
+  --gold-accent: #d4af37;
+  --white: #ffffff;
+  --text-dark: #1a1a1a;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Form Container */
+#survey-form {
+  background-color: var(--white);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+#title {
+  text-align: center;
+  color: var(--primary-green);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+#description {
+  text-align: center;
+  color: var(--secondary-green);
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Fieldsets */
+fieldset {
+  border: 2px solid var(--light-green);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(30, 126, 52, 0.02);
+}
+
+fieldset:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+label input[type="text"],
+label input[type="email"],
+label input[type="number"],
+label select,
+label textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid var(--light-green);
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+label input[type="text"]:focus,
+label input[type="email"]:focus,
+label input[type="number"]:focus,
+label select:focus,
+label textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 8px rgba(30, 126, 52, 0.3);
+  background-color: var(--light-green);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio and Checkbox Inputs */
+.inline {
+  width: auto;
+  margin-right: 10px;
+  accent-color: var(--primary-green);
+  cursor: pointer;
+}
+
+label .inline {
+  margin-top: 0;
+  padding-right: 10px;
+}
+
+/* Submit Button */
+#submit {
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+  color: var(--white);
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(30, 126, 52, 0.4);
+}
+
+#submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 126, 52, 0.5);
+  background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+}
+
+#submit:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(30, 126, 52, 0.3);
+}
+
+/* Small text */
+small {
+  color: var(--secondary-green);
+  font-size: 0.85em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #survey-form {
+    padding: 25px;
+  }
+
+  #title {
+    font-size: 2em;
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  label {
+    margin-bottom: 12px;
+  }
+}
